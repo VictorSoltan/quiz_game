@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { Routes, Route, useNavigate } from 'react-router-dom'
+import { Routes, Route } from 'react-router-dom'
 import Header from './components/header'
 import MainScreen from './pages/main_screen'
 
@@ -28,7 +28,7 @@ function App() {
       {!login ?
         <Route path="/" element={<MainScreen modalState={modalState} setModalState={setModalState} />} />
       :
-       <Route path="/" element={<InAppComponent />} >
+        <Route path="/" element={<InAppComponent />} >
         <Route path="games" element={<Games />} />
         <Route path="profile" element={<Profile />} />
         <Route path="amount" element={<PlayersAmount />} />

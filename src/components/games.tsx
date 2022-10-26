@@ -28,8 +28,8 @@ export default function Profile(){
                 <Link to={el.link}>
                     <div key={indx} style={ !el.work ? {opacity: '0.5'} : {opacity: '1', cursor: 'pointer'}}>
                         <div>
-                            <img src={el.img} />
-                            {!el.work && <img src={DollarCircle} className='dollar' />}
+                            <img src={el.img} alt={el.name}/>
+                            {!el.work && <img src={DollarCircle} className='dollar' alt="dollar"/>}
                         </div>
                         <span>{el.name}</span>
                     </div>                
