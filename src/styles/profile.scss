@@ -1,0 +1,54 @@
+.component{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 14px;
+    .user_info_container{
+        display: flex;
+        justify-content: flex-end;
+        margin-top: 50px;
+        width: 40%;
+        min-width: 590px;
+        @media (max-width: 1200px) {
+            min-width: 490px;
+        }        
+        .user_info{
+            width: 100%;
+            min-width: 300px;
+            padding-left: 25.6%;
+            div{
+                display: flex;
+                border-bottom: 1px solid rgba(76, 19, 87, 0.5);
+                padding: 20px 0;
+                span{
+                    font-weight: 600;
+                    font-size: 22px;
+                    line-height: 33px;    
+                    @media (max-width: 1200px) {
+                        font-size: 18px;
+                    }
+                    &:first-child{
+                        width: 60px;
+                    }
+                    &:last-child{
+                        margin-left: 50px;
+                    }
+                }
+            }
+        }
+    }
+    .profile_photo{
+        width: 60%;
+        img{
+            display: flex;
+            align-self: flex-start;
+            padding-left: 18.4%;
+            @media (max-width: 1440px) {
+                width: 40%;
+                height: auto;
+            }
+            // @media (max-width: 1200px) {
+            //     width: 45%;
+            // }
+        }
+    }
+}

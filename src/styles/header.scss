@@ -1,0 +1,43 @@
+@import 'variables';
+
+.header{
+    header{
+        display: flex;
+        justify-content: space-around;
+        padding: 26px 0;
+        div{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            &:first-child{
+                width: 34%;
+                min-width: 640px;
+                @media (max-width: 1200px) {
+                    min-width: 540px;
+                }
+                button{
+                    width: 140px;
+                    height: 40px;
+                }
+            }
+            &:last-child{
+                width: 240px;
+                justify-content: center;
+                span{
+                    font-family: 'Nunito';
+                    font-style: normal;
+                    font-weight: 300;
+                    font-size: 16px;
+                    line-height: 22px;  
+                    color: $purple;
+                    margin-right: 18px;
+                    button{
+                        background: none;
+                        border: none;
+                        color: $purple;
+                    }
+                }
+            }
+        }
+    }
+}

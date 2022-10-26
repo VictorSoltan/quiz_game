@@ -1,0 +1,51 @@
+@import 'variables';
+
+.games_container{
+    .games{
+        display: flex;
+        width: 940px;
+        height: 540px;
+        margin: 80px auto 109px;
+        
+        border: 1px solid #4C1357;
+        border-radius: 50px;
+        flex-wrap: wrap;
+        @media (max-width: 1366px) {
+            margin-top: 120px;
+            width: 740px;
+            height: 440px;
+        }
+        a{width: 33%;}
+        a, div{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-decoration: none;
+            span{
+                font-weight: 700;
+                font-size: 14px;
+                line-height: 19px;
+                text-align: center;
+                color: $purple;
+            }
+            .dollar{
+                position: absolute;
+
+            }
+        }
+    }
+    button{
+        width: 260px;
+        height: 61px;
+        background: $yellow;
+        border-radius: 90px;
+        color: $purple;
+
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 33px;
+        text-align: center;
+        margin-bottom: 80px;
+    }
+}

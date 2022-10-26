@@ -1,0 +1,57 @@
+@import 'variables';
+
+.waiting_friends{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .players_banner{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 110px 0;
+        background: rgba(255, 204, 0, 0.3);
+        border: 1px solid #4C1357;
+        backdrop-filter: blur(2px);
+        border-radius: 50px;
+        width: 740px;
+        height: 425.07px;   
+        @media (max-width: 1366px) {
+            width: 540px;
+            height: 325.07px;   
+        }
+        h1{
+            font-size: 36px;
+            line-height: 49px;
+            color: $purple;
+        }
+    }
+    .players{
+        display: flex;
+        justify-content: space-between;
+        width: 50%;
+        min-width: 940px;
+        padding-bottom: 60px;
+        @media (max-width: 1366px) {
+            min-width: 640px;
+        }
+        div{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            @media (max-width: 1366px) {
+                width: 13%;
+            }
+            span{
+                font-weight: 700;
+                font-size: 14px;
+                line-height: 19px;
+                color: #000000;  
+                margin: 6px 0;              
+            }
+            .player{
+                width: 100%;
+
+            }
+        }
+    }
+}
