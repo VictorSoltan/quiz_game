@@ -28,7 +28,7 @@ function App() {
       {!login ?
         <Route path="/quiz_game" element={<MainScreen modalState={modalState} setModalState={setModalState} />} />
       :
-        <Route path="/quiz_game" element={<InAppComponent />} >
+        <Route path="/" element={<InAppComponent />} >
         <Route path="games" element={<Games />} />
         <Route path="profile" element={<Profile />} />
         <Route path="amount" element={<PlayersAmount />} />
