@@ -1,10 +1,11 @@
 {
   "files": {
-    "main.css": "/quiz_game/static/css/main.604b66db.css",
-    "main.js": "/quiz_game/static/js/main.234556bf.js",
+    "main.css": "/quiz_game/static/css/main.88a6c29b.css",
+    "main.js": "/quiz_game/static/js/main.8779b871.js",
     "static/js/787.eaa387ba.chunk.js": "/quiz_game/static/js/787.eaa387ba.chunk.js",
     "static/media/mainInfo.png": "/quiz_game/static/media/mainInfo.550508baefbaee05cf81.png",
-    "static/media/background.png": "/quiz_game/static/media/background.9a62d3978b82319cfc84.png",
+    "static/media/background.png": "/quiz_game/static/media/background.c934cf8f78929fd7d638.png",
+    "static/media/back.png": "/quiz_game/static/media/back.754de0ee1ea64e4f377f.png",
     "static/media/Nunito-Black.ttf": "/quiz_game/static/media/Nunito-Black.4ee7cd566100b8c9adef.ttf",
     "static/media/Nunito-ExtraBold.ttf": "/quiz_game/static/media/Nunito-ExtraBold.42043534d98f10220d0a.ttf",
     "static/media/Nunito-SemiBold.ttf": "/quiz_game/static/media/Nunito-SemiBold.73450f7696b4e9e827f8.ttf",
@@ -15,10 +16,10 @@
     "static/media/1.png": "/quiz_game/static/media/1.0ed244f9c7678350d6d5.png",
     "static/media/4.png": "/quiz_game/static/media/4.5c0f89328d87683e1889.png",
     "static/media/5.png": "/quiz_game/static/media/5.4ebf873405cabdcad917.png",
+    "static/media/qr.png": "/quiz_game/static/media/qr.5c17924e52b613cf9674.png",
     "static/media/3.png": "/quiz_game/static/media/3.d10773d4f4bd05052019.png",
     "static/media/6.png": "/quiz_game/static/media/6.ba27d9d4b7f451601eff.png",
     "static/media/2.png": "/quiz_game/static/media/2.23048f38879a6580694d.png",
-    "static/media/qr-code.png": "/quiz_game/static/media/qr-code.58497c6ec2c2a6abfead.png",
     "static/media/friends.svg": "/quiz_game/static/media/friends.9f1b908637c7de208cb865fcc2f812f7.svg",
     "static/media/viber.svg": "/quiz_game/static/media/viber.9c8711e9b7bfebe3a900748ddfa7b87a.svg",
     "static/media/discord.svg": "/quiz_game/static/media/discord.3e8f36c8646cfcb6ed5f4f95a26be2bd.svg",
@@ -27,20 +28,22 @@
     "static/media/dollar-circle.svg": "/quiz_game/static/media/dollar-circle.f74185d3d4dbd72691ca2d88c3c501f0.svg",
     "static/media/logo.svg": "/quiz_game/static/media/logo.4c9f746438bfe9d6893fbc1c7d9332cd.svg",
     "static/media/google.svg": "/quiz_game/static/media/google.4063305890ea2f9ab245178aed0a4ea7.svg",
+    "static/media/camera.svg": "/quiz_game/static/media/camera.c450aee40d2c33d9e738122bacc7cac9.svg",
     "static/media/copy.svg": "/quiz_game/static/media/copy.3490433c1c7484efa1cbf1583889be0c.svg",
     "static/media/Vector.svg": "/quiz_game/static/media/Vector.17f820b791d4c96f0dd2807578387589.svg",
     "index.html": "/quiz_game/index.html",
     "static/media/telegram.svg": "/quiz_game/static/media/telegram.72d9636f78be3fc9d781f7443a8bd8c7.svg",
     "static/media/tg.svg": "/quiz_game/static/media/tg.30b34b41b5019ed525fa0ccdfd567aa6.svg",
+    "static/media/profile.svg": "/quiz_game/static/media/profile.e7d8cd53dbcef2b423103767e21b466d.svg",
     "static/media/share.svg": "/quiz_game/static/media/share.aae0c1bf0a042edd4dfac7309a638b27.svg",
     "static/media/messanger.svg": "/quiz_game/static/media/messanger.d812d572bf28a4417cba8f934fdfaf42.svg",
     "static/media/fb.svg": "/quiz_game/static/media/fb.ef49d7747f7de53fcadfc497c2ba8f5e.svg",
-    "main.604b66db.css.map": "/quiz_game/static/css/main.604b66db.css.map",
-    "main.234556bf.js.map": "/quiz_game/static/js/main.234556bf.js.map",
+    "main.88a6c29b.css.map": "/quiz_game/static/css/main.88a6c29b.css.map",
+    "main.8779b871.js.map": "/quiz_game/static/js/main.8779b871.js.map",
     "787.eaa387ba.chunk.js.map": "/quiz_game/static/js/787.eaa387ba.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.604b66db.css",
-    "static/js/main.234556bf.js"
+    "static/css/main.88a6c29b.css",
+    "static/js/main.8779b871.js"
   ]
 }
