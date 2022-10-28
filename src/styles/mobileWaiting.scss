@@ -1,0 +1,51 @@
+@import 'variables';
+
+.mobile_game{
+    margin-top: 110px;
+    h1{
+        font-family: 'Nunito-Black';
+        font-style: normal;
+        font-weight: 900;
+        font-size: 40px;
+        line-height: 55px;
+    }
+    .players{
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        width: 80%;
+        padding-bottom: 60px;
+        margin: 5vh auto 2vh;
+        div{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 81.88px;
+
+            .player{
+                width: 100%;
+            }
+            .vector{
+                margin-top: -24px;
+            }
+            span{
+                font-family: 'Nunito-Bold';
+                font-weight: 700;
+                font-size: 14px;
+                line-height: 19px;
+                color: #000000;  
+                margin: 6px 0;              
+            }            
+        }
+    }
+    button{
+        margin: 0vh auto;
+        width: 179px;
+        height: 51px;
+        font-family: 'Nunito-Black';
+        font-style: normal;
+        font-weight: 900;
+        font-size: 24px;
+        line-height: 33px;
+    }
+}

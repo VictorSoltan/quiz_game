@@ -3,31 +3,74 @@
 .in_app_components{
     border-top: 1px solid rgba(76, 19, 87, 0.5);
     width: 100%;
-    min-height: 100vh;
+    min-height: calc(100vh - 98px);
     height: 100%;
     background-repeat: no-repeat;
     background-size: cover;
-    .banner{
+    @media (max-width: 480px) {
+        background-size: 100vw calc(2*100vh);
+        background-repeat: repeat;
+    }
+    .banner_container{
         position: relative;
-        display: flex;
-        align-items: center;
-        width: 40%;
-        min-width: 590px;
-        height: 77px;
-        left: 0px;
         top: 68px;
-        background: $yellow;
-        @media (max-width: 1200px) {
-            min-width: 490px;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 77px;
+        @media (max-width: 768px) {
+            height: 40px;
+        }        
+        .banner{
+            display: flex;
+            align-items: center;
+            width: 40%;
+            height: 100%;
+            min-width: 590px;
+            background: $yellow;
+            @media (max-width: 1200px) {
+                min-width: 490px;
+            }
+            @media (max-width: 1024px) {
+                min-width: 200px;
+            }        
+
+            h1{
+                font-family: 'Nunito-Black';  
+                font-weight: normal;
+                font-weight: 900;
+                font-size: 36px;
+                line-height: 49px;
+                color: $almostBlck;
+                padding-left: 25.6%;
+                @media (max-width: 1024px) {
+                    font-size: 24px;
+                    line-height: 33px;   
+                }
+                @media (max-width: 768px) {
+                    padding-left: 23px;
+                }
+            }
         }
-        h1{
-            font-family: 'Nunito-Black';  
-            font-weight: normal;
-            font-weight: 900;
+        .tour{
+            font-family: "Nunito-Bold";
+            text-align: left;
+            font-weight: 700;
             font-size: 36px;
             line-height: 49px;
-            color: $almostBlck;
-            padding-left: 25.6%;
+            color: $purple;          
+            padding-right: 14%;
+            @media (max-width: 1024px) {
+                font-size: 30px;
+            }
+            @media (max-width: 768px) {
+                padding-right: 4%;
+                font-family: "Nunito";
+                font-weight: 600;
+                font-size: 24px;
+                line-height: 33px;                
+            }
         }
     }
 }

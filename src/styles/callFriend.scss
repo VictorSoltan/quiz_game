@@ -25,17 +25,22 @@
         }                  
     }
     .qr_code{
-        margin-top: 40px;
-        @media (max-width: 1366px) {
-            width: 32%;
-        }
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 3.4vh auto 0;
+        height: 42.2vh;
+        width: 42.2vh;
+        filter: drop-shadow(0px 4px 11px rgba(0, 0, 0, 0.25));
+        border-radius: 20px;
+        background: white;
+        padding: 5px;
     }
     footer{
         display: flex;
         align-items: center;
         justify-content: space-around;
-        margin-top: 60px;
-        padding-bottom: 60px;
+        margin: 6vh 0 4vh;
         .footer_elem{
             display: flex;
             align-items: center;

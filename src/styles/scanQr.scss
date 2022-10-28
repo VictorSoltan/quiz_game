@@ -1,0 +1,56 @@
+@import 'variables';
+
+.scan_qr{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 70px;
+    .label{
+        align-self: flex-start;
+        width: 40%;
+        min-width: 590px;
+        @media (max-width: 1024px) {
+            min-width: 200px;
+        }        
+        @media (max-width: 768px) {
+            min-width: 0px;
+        }
+        h1{
+            font-family: "Nunito-Bold";
+            font-weight: 500;
+            font-size: 24px;
+            line-height: 33px;
+            text-align: left;
+            width: 100%;
+            min-width: 400px;
+            padding-left: 25.6%;  
+            color: $purple;        
+            @media (max-width: 768px) {
+                min-width: 300px;
+                padding-left: 23px;  
+            }
+        }  
+    }
+    .borders{
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 252px;
+        height: 252px;
+    }
+    button{
+        background: none;
+        border: none;
+        img{
+            width: 88px;
+            height: 88px;
+            transform: matrix(-1, 0, 0, 1, 0, 0);
+            margin-top: 36px;            
+        }
+    }
+    span{
+        font-weight: 500;
+        font-size: 24px;
+        line-height: 33px;
+        color: #000000;        
+    }
+}

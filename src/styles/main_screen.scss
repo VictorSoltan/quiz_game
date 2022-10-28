@@ -4,17 +4,30 @@
     display: flex;
     justify-content: space-between;
     width: 100%;
-    padding-top: 106px;
+    min-height: calc(100vh - 96px);
     background-repeat: no-repeat;
-    background-position: top right;
-    background-size: 800px;
+    background-position: bottom right;
+    background-size: clamp(640px, 72vh, 780px) auto;
+    @media (max-width: 768px) {
+        background-size: clamp(440px, 72vh, 780px) auto;
+    }
+    @media (max-width: 480px) {
+        background-image: none !important;
+    }
     .mainInfo{
         display: flex;
         flex-direction: column;
         align-items: center;
         width: 40%;
         min-width: 590px;
-        padding-bottom: 100px;
+        padding-top: 105px;
+        padding-top: 9.7vh;
+        @media (max-width: 768px) {
+            min-width: 0px;
+            align-items: flex-start;
+            width: 100%;
+            padding-top: 5vh;
+        }   
         .banner{
             width: 100%;
             position: relative;
@@ -22,6 +35,13 @@
             flex-direction: column;
             align-items: center;
             background-color: $yellow;
+            @media (max-width: 768px) {
+                width: 60%;
+            }
+            @media (max-width: 480px) {
+                width: 50%;
+                min-width: 275px;
+            }            
             div{
                 text-align: left;
                 padding-left: 94px;
@@ -29,93 +49,169 @@
                     padding-left: 4px;
                 }                      
                 h3{
+                    margin: 2.84vh 0 0;
                     font-family: "Nunito-Black";
-                    margin-bottom: 0px;
                     font-weight: 900;
                     font-size: 36px;
                     line-height: 49px;
                     color: $almostBlck;
+                    @media (max-width: 1024px) {
+                        font-weight: 900;
+                        font-size: 20px;
+                        line-height: 27px;                           
+                    }
                 }
                 h1{
+                    margin:  -6px 0 2.84vh;
                     font-family: "Nunito-Black";
-                    margin-top: 0px;
                     font-weight: 900;
                     font-size: 48px;
                     line-height: 65px;
                     color: $almostBlck;
+                    @media (max-width: 1024px) {
+                        font-weight: 900;
+                        font-size: 36px;
+                        line-height: 49px;
+                    }
                 }
             }
             img{
                 position: absolute;
                 right: -22px;
                 bottom: -25px;
+                @media (max-width: 768px) {
+                    right: -16px;
+                    bottom: -10px;
+                    width: 112px;
+                }
 
             }
         }
         section{
+            display: flex;
+            flex-direction: column;
             margin-left: 160px;
             text-align: left;
             @media (max-width: 1200px) {
                 margin-left: 70px;
             }            
+            @media (max-width: 768px) {
+                width: 92%;
+                margin-left: 8%;
+            }
             p{
-                margin-top: 57px;
+                text-shadow: 2px 2px 6px white;
+                margin-top: 7vh;
                 font-weight: 500;
                 font-size: 24px;
                 line-height: 33px;
                 color: #000000;
                 width: 440px;
+                @media (max-width: 768px) {
+                    font-size: 14px;
+                    line-height: 19px;          
+                    width: 231px;
+                }
+                @media (max-width: 480px) {
+                    margin-top: 2.6vh;
+                }
             }
             h1{
+                text-shadow: 1px 1px 6px white;
+                margin-top: 4vh;
                 font-family: "Nunito-Black";
                 font-weight: 900;
                 font-size: 48px;
                 line-height: 50px;
                 color: $purple;
-                margin-bottom: 25px;
+                margin-bottom: 3vh;
+                @media (max-width: 768px) {
+                    font-size: 20px;
+                    line-height: 25px;
+                }
+                @media (max-width: 480px) {
+                    margin-top: 28.6vh;
+                    margin-bottom: 2vh;
+                }                
             }
             button{
                 width: 340px;
                 height: 50px;
-
-                background: $yellow;
-                color: $purple;
-                border-radius: 20px;
-                border: none;
-
                 font-weight: 600;
                 font-size: 24px;
                 line-height: 33px;
+                @media (max-width: 768px) {
+                    width: 202px;
+                    height: 30px;
+                    font-size: 16px;
+                    line-height: 22px;
+                }
             }
             footer{
+                position: relative;
                 text-align: center;
-                margin-top: 57px;
+                margin: 6vh 0 3vh;
                 padding-top: 10px;
                 width: 440px;
-                height: 123px;
+                min-height: 100px;
+                max-height: 123px;
+                height: 12vh;
                 color: white;
                 background: $purple;
                 border-radius: 20px;
+                @media (max-width: 768px) {
+                    min-height: 75px;
+                    width: 251px;
+                }
+                @media (max-width: 480px) {
+                    align-self: flex-end;
+                    width: 251px;
+                    margin: 2.8vh 0 2vh;
+                    height: 75px;
+                    border-top-right-radius: 0px;
+                    border-bottom-right-radius: 0px;
+                }
+                .phone_image{
+                    display: none;
+                    @media (max-width: 480px) {
+                        display: block;
+                        position: absolute;
+                        width: 100vw;
+                        bottom: 85px;
+                        right: 0;
+                        z-index: -1000;
+                    }
+                }
                 span{
-                    margin: 20px 0;
                     font-weight: 500;
                     font-size: 24px;
                     line-height: 33px;
+                    @media (max-width: 768px) {
+                        font-size: 16px;
+                        line-height: 22px;
+                    }
                 }
                 div{
                     display: flex;
                     justify-content: space-between;
                     margin: 14px auto;
-                    width: 58%;
+                    width: 24.5vh;
+                    max-width: 260px;
+                    @media (max-width: 480px) {
+                        margin: 6px auto;
+                        max-width: 160px;
+                    }
+                    img{
+                        height: 5.6vh;
+                        max-height: 52px;
+                        @media (max-width: 480px) {
+                            height: 4.6vh;
+                            max-height: 40px;
+                        }
+                    }
                 }
             }
         }
 
-    }
-    .mainInfoImg{
-        margin-top: -120px;
-        width: 45%;
-        min-width: 750px;
-        height: auto;
     }
 }

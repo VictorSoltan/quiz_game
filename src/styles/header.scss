@@ -2,42 +2,146 @@
 
 .header{
     header{
+        position: relative;
         display: flex;
+        align-items: center;
         justify-content: space-around;
         padding: 26px 0;
-        div{
+        z-index: 9999;
+        background: white;
+        @media (max-width: 1024px) {
+            justify-content: space-between;
+            padding: 23px 6% 23px 8%;
+            border-bottom: 1px solid $purple;
+        }
+        .header_elem{
             display: flex;
             justify-content: space-between;
             align-items: center;
-            &:first-child{
-                width: 34%;
-                min-width: 640px;
-                @media (max-width: 1200px) {
-                    min-width: 540px;
+        }
+        .logo_elem{
+            width: 34%;
+            min-width: 640px;
+            .adaptive_menu{
+                display: none;
+                flex-direction: column;
+                align-items: center;
+                justify-content: space-between;
+                height: 29px;
+                margin-right: 14px;
+                @media (max-width: 1024px) {
+                    display: flex;
                 }
-                button{
-                    width: 140px;
-                    height: 40px;
+                div{
+                    transition: 0.4s;
+                    background: $yellow;
+                    border-radius: 3.5px;
+                    width: 40px;
+                    height: 7px;
+                }
+            }      
+            .activeMenu{
+                div {
+                    background: $purple;
+                    &:nth-child(1){
+                        transform: translate(0, 11px) rotate(-45deg);
+                    }
+                    &:nth-child(2){
+                        opacity: 0;
+                    }
+                    &:nth-child(3){
+                        transform: translate(0, -11px) rotate(45deg);
+                    }
+                }
+            }          
+            @media (max-width: 1200px) {
+                min-width: 540px;
+            }
+            @media (max-width: 1024px) {
+                width: 40px;
+                min-width: 0px;
+            }
+            a{
+                @media (max-width: 1024px) {
+                    display: none;
                 }
             }
-            &:last-child{
-                width: 240px;
-                justify-content: center;
+            button{
+                width: 140px;
+                height: 40px;
+            }
+        }
+        .profile_elem{
+            width: 240px;
+            justify-content: center;
+            @media (max-width: 1024px) {
+                width: 140px;
+            }
+            span{
+                font-family: 'Nunito';
+                font-style: normal;
+                font-weight: 300;
+                font-size: 16px;
+                line-height: 22px;  
+                color: $purple;
+                margin-right: 18px;
+                @media (max-width: 1024px) {
+                    margin-right: 10px;
+                }
                 span{
-                    font-family: 'Nunito';
-                    font-style: normal;
-                    font-weight: 300;
-                    font-size: 16px;
-                    line-height: 22px;  
+                    margin-right: 0px;
+                    @media (max-width: 1024px) {
+                        display: none;
+                    }
+                }
+                button{
+                    background: none;
+                    border: none;
                     color: $purple;
-                    margin-right: 18px;
-                    button{
-                        background: none;
-                        border: none;
-                        color: $purple;
+                    &:first-child{
+                        @media (max-width: 1024px) {
+                            display: none;
+                        }
                     }
                 }
             }
         }
+    }
+    .adaptiveMenu{
+        position: fixed;
+        top: 0;
+        left: 0;
+        transition: 1s;
+        width: 100%;
+        height: 100%;
+        z-index: 99;
+        div{
+            padding-top: 89px;
+            position: absolute;
+            background: rgba(255, 204, 0, 0.5);
+            height: 100%;
+            width: 100%;
+            cursor: pointer;
+            backdrop-filter: blur(2px);
+            z-index: 1000;
+            flex-grow: 1;
+        }
+        a{
+            position: relative;
+            top: 109px;
+            z-index: 9999;
+            width: 80%;
+            height: 52px;
+            margin: 4vh auto 0;
+
+            font-family: "Nunito-Black";
+
+            font-weight: 700;
+            font-size: 18px;
+            line-height: 22px;            
+        }
+    }
+    .adaptiveMenuHidden{
+        left: -100%;
     }
 }

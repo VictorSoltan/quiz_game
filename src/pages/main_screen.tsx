@@ -1,4 +1,6 @@
 import MainInfo from '../assets/mainInfo.png';
+import PhoneInfo from '../assets/phone/back.png';
+
 import Friends from '../assets/friends.svg';
 
 import Discord from '../assets/discord.svg';
@@ -12,7 +14,7 @@ export default function MainScreen({modalState, setModalState} : {modalState: st
     const socialMedia = [Discord, Telegram, Insta]
 
     return(
-        <section className="main_screen" style={{ backgroundImage: `url(${MainInfo})` }}>
+        <section className="main_screen" style={{backgroundImage: `url(${MainInfo})`}}>
             <div className='mainInfo'>
                 <div className='banner'>
                     <div>
@@ -28,12 +30,13 @@ export default function MainScreen({modalState, setModalState} : {modalState: st
                         або навіть поруч
                     </p>
                     <h1>Тицяй на кнопку<br/>та починаємо</h1>
-                    <button onClick={() => setModalState('Reg')}>зареєструватися</button>
+                    <button className='yellow_button' onClick={() => setModalState('Reg')}>зареєструватися</button>
                     <footer>
+                        <img src={PhoneInfo} alt="phone image" className='phone_image' />
                         <span>Ми в соціальних мережах</span>
                         <div>
                             {socialMedia.map((el, indx) => (
-                                <a href="#"><img src={el} alt="social" /></a>
+                                <a key={indx} href="#"><img src={el} alt="social" /></a>
                             ))}
                         </div>
                     </footer>
