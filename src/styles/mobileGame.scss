@@ -1,0 +1,149 @@
+@import 'variables';
+
+.mobile_game{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    .select_theme_container{
+        display: flex;
+        // display: none;
+        align-items: center;
+        justify-content: space-between;
+        min-width: 590px;
+        @media (max-width: 1200px) {
+            min-width: 490px;
+        }                 
+        @media (max-width: 768px) {
+            min-width: 0px;
+            justify-content: flex-start;
+        }
+        .choose_theme{
+            text-align: left;
+            h1{
+                font-family: "Nunito-Bold";
+                color: $purple;          
+                margin: 0;  
+            }
+            p{
+                color: $purple;
+            }
+        }
+        .regular{
+            h1{
+                font-family: "Nunito";
+                font-weight: 700;
+                font-size: 36px;
+                line-height: 49px;
+                @media (max-width: 1200px) {
+                    font-size: 30px;
+                }
+                @media (max-width: 768px) {
+                    font-style: normal;
+                    font-weight: 600;
+                    font-size: 14px;
+                    line-height: 19px;
+
+                }
+            }
+            p{
+                font-weight: 300;
+                font-size: 20px;
+                line-height: 27px;
+                @media (max-width: 768px) {
+                    font-weight: 300;
+                    font-size: 10px;
+                    line-height: 14px;
+                }
+            }                
+        }        
+        .not_regular{
+            margin-bottom: 1px;
+            h1{
+                font-family: "Nunito";
+                font-weight: 600;
+                font-size: 24px;
+                line-height: 33px;
+                width: 60%;
+                margin-bottom: 0;
+            }
+
+        }
+    }
+
+
+    .theme_id_adapt{
+        display: none;
+        margin: 5vh auto 0;
+        @media (max-width: 768px) {
+            display: flex;
+            width: 88px;
+            height: 88px;
+            font-weight: 700;
+            font-size: 48px;
+            line-height: 65px;                        
+        }
+    }
+    .choose_answer{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 0vh;
+        margin-left: -38px;
+        width: 100vw;
+        .themes{
+            display: flex;
+            margin: 8vh auto;
+            justify-content: space-between;
+            width: 70%;
+            @media (max-width: 768px) {
+                margin: 0 auto;
+                align-items: center;
+                height: 36.8vh;
+                flex-direction: column;
+            }
+            button{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background: $yellow;
+                border-radius: 50%;
+                width: 160px;
+                height: 160px;
+    
+                font-family: "Nunito-Black";
+                font-weight: 900;
+                font-size: 24px;
+                line-height: 33px;
+                text-align: center;
+                color: $purple;
+                @media (max-width: 768px) {
+                    cursor: pointer;
+                    width: 295px;
+                    height: 51px;
+                    border-radius: 20px;
+    
+                    font-family: 'Nunito';
+                    font-style: normal;
+                    font-weight: 600;
+                    font-size: 16px;
+                    line-height: 22px;                
+                }
+            }
+        }        
+        .select_theme{
+            display: none;
+            font-family: 'Nunito-Black';
+            font-style: normal;
+            font-weight: 900;
+            font-size: 24px;
+            line-height: 33px;
+            
+            margin: 3vh 0 2vh;    
+            @media (max-width: 768px) {
+                display: block;
+            }
+        }        
+
+
+    }
+}

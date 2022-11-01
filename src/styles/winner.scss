@@ -1,0 +1,48 @@
+@import 'variables';
+
+.winner{
+    display: flex;
+    flex-direction: column;
+    .winner_content{
+        display: flex;
+        align-self: center;
+        align-items: center;
+        justify-content: space-between;
+        h3{
+            font-family: 'Nunito';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 40px;
+            line-height: 55px;
+            text-align: center;         
+            margin-left: 36px;   
+        }
+    }
+    .result{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        span{
+            position: absolute;
+            font-family: 'Nunito-Black';
+            margin-top: 14px;
+            font-style: normal;
+            font-weight: 900;
+            font-size: 64px;
+            line-height: 87px;
+            text-align: center;
+            
+            color: $purple;
+        }
+    }
+    h2{
+        font-family: 'Nunito';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 64px;
+        line-height: 87px;
+        text-align: center;
+        color: $purple;     
+        margin-bottom: 0;   
+    }
+}

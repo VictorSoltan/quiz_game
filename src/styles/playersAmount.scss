@@ -3,7 +3,6 @@
 .player_amount{
     display: flex;
     justify-content: space-between;
-    margin: 67px 0;
     .choose_amount_container{
         display: flex;
         flex-direction: column;
@@ -15,8 +14,8 @@
         }                 
         .choose_amount{
             width: 100%;
-            padding-left: 25.6%;
             h1{
+                margin-top: 0;
                 font-family: "Nunito-Bold";
                 text-align: left;
                 font-weight: 700;
@@ -83,16 +82,23 @@
         flex-direction: column;
         align-items: center;
         width: 50%;
+        margin-top: -121px;
         @media (max-width: 1200px) {
-            width: 40%;
+            // width: 50%;
         }
         img{
-            width: 40%;
+            width: 50%;
+            min-width: 240px;
             @media (max-width: 1200px) {
-                width: 50%;
+                width: 70%;
+            }
+            @media (max-width: 1024px) {
+                width: 90%;
+                min-width: 180px;
             }
         }
         span{
+            margin-top: 10px;
             font-weight: 700;
             font-size: 14px;
             line-height: 19px;

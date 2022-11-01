@@ -1,0 +1,26 @@
+@import 'variables';
+
+.gratitude{
+    .gratitude_content{
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        margin-top: 4vh;
+        div{
+            p{
+                text-align: left;
+                font-family: 'Nunito-Bold';
+                font-style: normal;
+                font-weight: 700;
+                font-size: 36px;
+                line-height: 49px;     
+                margin-top: 0;           
+            }
+        }
+        .qr_code{
+            width: calc(338px - 40px);
+            height: calc(338px - 40px); 
+            padding: 20px;
+        }        
+    }
+}

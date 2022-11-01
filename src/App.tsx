@@ -14,8 +14,29 @@ import CallFriend from './components/callFriend'
 import ScanQr from './components/scanQr'
 import WaitingFriends from './components/waitingFriends'
 import SelectTheme from './components/selectTheme'
+import Question from './components/question'
+
+import RoundEnd from './components/roundEnd'
+
+
+
+import ResultTour from './components/resultTour'
+
+import MobileProfile from './components/mobileProfile'
+
 import MobileWaiting from './components/mobileWaiting'
 import MobileGame from './components/mobileGame'
+import Sorting from './components/sorting'
+import MobileFinalRound from './components/mobileFinalRound'
+
+
+import MobileResults from './components/mobileResults'
+
+
+import FinalRound from './components/finalRound'
+import Results from './components/results'
+import Winner from './components/winner'
+import Gratitude from './components/gratitude'
 
 import './App.css';
 
@@ -41,8 +62,26 @@ function App() {
         <Route path="scan_qr" element={<ScanQr setLogin={setLogin} />} />
         <Route path="waiting" element={<WaitingFriends />} />
         <Route path="game_start/:id" element={<SelectTheme />} />
+        <Route path="question" element={<Question />} />
+        <Route path="round_end" element={<RoundEnd />} />
+        
+
+        <Route path="result_tour" element={<ResultTour />} />
+
+        <Route path="mobile_profile" element={<MobileProfile />} />
         <Route path="mobile_waiting" element={<MobileWaiting />} />
         <Route path="mobile_game" element={<MobileGame />} />
+        <Route path="mobile_sorting" element={<Sorting />} />
+
+        
+        <Route path="mobile_final_round" element={<MobileFinalRound />} />
+
+        <Route path="mobile_results" element={<MobileResults />} />
+
+        <Route path="final_round" element={<FinalRound />} />
+        <Route path="results" element={<Results />} />
+        <Route path="winner" element={<Winner />} />
+        <Route path="gratitude" element={<Gratitude />} />
         </Route>
       {/* }  */}
       </Routes>

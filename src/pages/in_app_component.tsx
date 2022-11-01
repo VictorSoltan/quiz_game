@@ -22,7 +22,9 @@ export default function InAppComponent(){
                 {(pathname === 'game_start' || pathname === 'mobile_waiting' || pathname === 'mobile_game') &&
                     <h1 className='tour'>1-й тур</h1>}
             </div>
-            <Outlet />      
+            <div className='content'>
+                <Outlet />      
+            </div>
         </div>
     )
 }

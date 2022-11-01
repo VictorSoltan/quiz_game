@@ -8,6 +8,7 @@ import './fonts/Nunito-Regular.ttf';
 import './fonts/Nunito-SemiBold.ttf';
 import './fonts/Nunito-ExtraBold.ttf';
 
+
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );

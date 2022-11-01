@@ -23,21 +23,9 @@ export default function Modal({modalState, setModalState, setLogin} : {modalStat
     return(
         <div className='modal_window'>
             <div className='background' onClick={() => setModalState("")}/>
-            <div className='modal' style={modalState === 'Reg' ? { height: '603px'} : { height: '503px'}}>
+            <div className='modal'>
                 <h1>{modalState === 'Reg' ? 'Реєстрація' : 'Увійти'}</h1>
                 <form onSubmit={formik.handleSubmit}>
-                    {modalState === 'Reg' &&
-                    <>
-                        <label htmlFor="username">username</label>
-                        <input
-                          id="username"
-                          name="username"
-                          type="username"
-                          onChange={formik.handleChange}
-                          value={formik.values.username}
-                        />                    
-                    </>
-                    }
                     <label htmlFor="email">e-mail або номер телефону</label>
                     <input
                       id="email"
@@ -55,7 +43,7 @@ export default function Modal({modalState, setModalState, setLogin} : {modalStat
                       value={formik.values.password}
                     />                
                     <div>
-                        <button>{modalState === 'Reg' ? 'зареєструватися' : 'в мене вже є аккаунт'}</button>
+                        <button>{modalState === 'Reg' ? 'в мене вже є аккаунт' : 'зареєструватися'}</button>
                         <button type="submit" onClick={() => {setLogin(true);  setModalState(""); navigate('/games')}}>{modalState === 'Reg' ?  'зареєструватися' : 'увійти'}</button>
                     </div>
                 </form>

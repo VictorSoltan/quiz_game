@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import I1 from '../assets/players/1.png'
 import I2 from '../assets/players/2.png'
 import I3 from '../assets/players/3.png'
@@ -20,19 +21,17 @@ export default function MobileWaiting(){
     ]
 
     return(
-        <div className="mobile_game">
+        <div className="mobile_waiting">
             <h1>Готові до гри ?</h1>
-            <div className='players'>
+            <div className='waiting_players'>
                 {players.map((item, index) => (
                     <div key={index} style={item.ready ? {} : {opacity: '0.5'}}>
                         <img src={item.img} alt="player" className='player' />
-                        {item.ready &&
-                            <img src={Vector} alt="ready" className='vector'  />}
                         <span>{item.name}</span>
                     </div>
                 ))}
             </div>
-            <button className='yellow_button'>ТАК</button>
+            <Link to='/mobile_game' className='yellow_button'>Готовий</Link>
         </div>
     )
 }

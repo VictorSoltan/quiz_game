@@ -1,20 +1,9 @@
-import I1 from '../assets/players/1.png'
-import I2 from '../assets/players/2.png'
-import I3 from '../assets/players/3.png'
-import I4 from '../assets/players/4.png'
+
 
 import '../styles/selectTheme.scss';
+import Players from './players'
 
 export default function SelectTheme(){
-
-    const players = [
-        { img: I1, name: 'Мари'},
-        { img: I3, name: 'ЕщеКтот'},
-        { img: I2, name: 'Вика'},
-        { img: I4, name: ')0)))'},
-        { img: I2, name: 'Вика'},
-        { img: I4, name: ')0)))'}
-    ]
 
     const themes = [
         'Технології та IT',
@@ -43,15 +32,7 @@ export default function SelectTheme(){
                 <div>Цікаві факти</div>
                 <span>5</span>
             </div>}
-            <div className='players'>
-                {players.map((item, index) => (
-                    <div key={index}>
-                        <h6>1</h6>
-                        <img src={item.img} alt="player" className='player' />
-                        <span>{item.name}</span>
-                    </div>
-                ))}
-            </div>        
+            <Players />
             <span className='theme_id theme_id_adapt'>5</span>    
         </div>
     )

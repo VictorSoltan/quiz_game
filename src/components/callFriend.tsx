@@ -1,3 +1,4 @@
+import {Link} from 'react-router-dom'
 import Dscrd from '../assets/dscrd.svg'
 import Tg from '../assets/tg.svg'
 import Viber from '../assets/viber.svg'
@@ -24,13 +25,18 @@ export default function CallFriend(){
             <div className='h1_container'>
                 <h1>Відскануй QR код та додавайся до гри !</h1>
             </div>
+            <div className='players_online'>
+                <h4>Підключено гравців:</h4>
+                <span className='yellow_button'>3/6</span>
+            </div>
             <div className='qr_code'>
                 <QRCode 
                     viewBox={`0 0 256 256`} 
                     style={{ height: "auto", maxWidth: "90%", width: "90%" }} 
-                    value={'/game_start/ds123'} 
+                    value={'/mobile_profile'} 
                 />
             </div>
+            <Link to="/waiting" className='yellow_button room'>Кімната очікування</Link>
             <footer>
                 <div className='footer_elem'>
                     <button className='yellow_button'>Заділись грою з друзяками:</button>

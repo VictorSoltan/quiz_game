@@ -1,56 +1,76 @@
 @import 'variables';
 
 .call_friend{
-    margin-top: 87px;
+    display: flex;
+    flex-direction: column;
     .h1_container{
-        margin-top: 50px;
         width: 40%;
         min-width: 590px;
         @media (max-width: 1200px) {
             min-width: 490px;
         }      
         h1{
+            margin-top: 0;
             font-family: "Nunito-Bold";
             font-weight: 700;
             font-size: 36px;
-            line-height: 49px;
+            line-height: 36px;
             text-align: left;
             color: $purple;        
             width: 100%;
             min-width: 700px;
-            padding-left: 25.6%;  
             @media (max-width: 1200px) {
                 font-size: 30px;
             }
         }                  
     }
-    .qr_code{
+    .players_online{
         display: flex;
-        justify-content: center;
         align-items: center;
-        margin: 3.4vh auto 0;
-        height: 42.2vh;
-        width: 42.2vh;
-        filter: drop-shadow(0px 4px 11px rgba(0, 0, 0, 0.25));
-        border-radius: 20px;
-        background: white;
+        align-self: center;
+        h4{
+            font-family: 'Nunito';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 16px;
+            line-height: 22px;
+            text-align: center;            
+        }
+        span{
+            width: 72px;
+            height: 35px;
+            margin-left: 6px;            
+        }
+    }
+    .qr_code{
+
         padding: 5px;
+        margin: 0.4vh auto 0;
+        height: 31.3vh;
+        width: 31.3vh;
+
+    }
+    .room{
+        font-family: 'Nunito-Bold';
+        width: 267px;
+        height: 35px;        
+        margin: 4vh 0 0vh;
+        align-self: center;
     }
     footer{
         display: flex;
         align-items: center;
-        justify-content: space-around;
+        justify-content: space-between;
         margin: 6vh 0 4vh;
         .footer_elem{
             display: flex;
             align-items: center;
             flex-direction: column;
             justify-content: space-between;
-            align-items: center;
             height: 100px;
-            width: 530px;
+            width: 400px;
             @media (max-width: 1366px) {
-                width: 450px;
+                // width: 450px;
             }
             &:first-child{
                 .yellow_button{
@@ -76,6 +96,10 @@
                 }
             }
             &:last-child{
+                width: 500px;
+                @media (max-width: 1366px) {
+                    width: 460px;
+                }
                 section{
                     display: flex;
                     width: 100%;

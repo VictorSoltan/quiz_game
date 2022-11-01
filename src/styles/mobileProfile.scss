@@ -1,0 +1,84 @@
+@import 'variables';
+
+.mobile_profile{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100vw;
+    margin-top: 3vh;
+    margin-left: -39px;
+    h6{
+        font-family: 'Nunito';
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 27px;
+        text-align: center;     
+        color: $purple;   
+        margin: 0;
+    }
+    input{
+        margin: 1vh 0 6vh;
+        height: 55px;
+        width: 79%;
+        
+        background: #FFFFFF;
+        border: 0.5px solid #1A1A1A;
+        box-shadow: inset 0px 2px 4px rgba(0, 0, 0, 0.25);
+        border-radius: 50px;        
+    }
+    .photo_slider{
+        width: calc(100% - 39px);
+        margin: 2vh 0 6vh;
+        overflow: scroll;
+        margin-left: 39px;
+        padding-bottom: 10px;
+        div{
+            display: flex;
+            justify-content: space-between;
+            width: 160%;
+            padding-right: 39px;
+            img{
+                width: 13%;
+            }
+        }
+    }
+    .choose_photo{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 82%;
+        button{
+            width: 222px;
+            height: 43px;   
+            
+            font-weight: 500;
+            font-size: 20px;
+            line-height: 27px;
+            text-align: center;  
+            
+            color: #000000;            
+            img{
+                width: 32px;
+                margin-right: 13px;
+            }
+        }
+        input{
+            display: none;
+        }
+        .profile_photo{
+            width: 81px;
+            height: 81px;            
+        }
+    }
+    .ready{
+        font-family: 'Nunito';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 33px;
+        
+        width: 179px;
+        height: 51px;       
+        margin-top: 5vh; 
+    }
+}

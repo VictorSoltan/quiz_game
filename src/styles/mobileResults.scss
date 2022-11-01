@@ -1,0 +1,64 @@
+@import 'variables';
+
+.mobile_results{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    h1{
+        align-self: flex-start;
+        font-family: 'Nunito';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 33px;
+        color: $purple;        
+        margin: 0 0 20px 28px;
+    }
+    .results{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 40vh;
+        margin-top: 3vh;
+        .result{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 284px;
+            height: 40px;
+            padding: 0 20px;
+            background: $yellow;
+            border-radius: 20px;
+            div{
+                img{
+                    width: 68px;
+                    height: 68px;
+                    margin-left: -22px;  
+                    &:first-child{
+                        margin-left: -20px;  
+                    }                  
+                }
+            }
+            span{
+                font-family: 'Nunito-Black';
+                font-style: normal;
+                font-weight: 900;
+                font-size: 36px;
+                line-height: 49px;
+                text-align: center;
+                            
+                color: #4C1357;
+            }
+        }
+    }
+    button{
+        margin-top: 8vh;
+        width: 236px;
+        height: 40px;
+        font-weight: 600;
+        font-size: 24px;
+        line-height: 33px;
+        color: #1A1A1A;                 
+    }
+}

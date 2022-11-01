@@ -4,15 +4,11 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    margin: 67px 0 0;
     .select_theme_container{
         display: flex;
-        // display: none;
         align-items: center;
         justify-content: space-between;
         min-width: 590px;
-        width: calc(100% - 20.6%);
-        padding: 0 0 0 10.24%;
         @media (max-width: 1200px) {
             min-width: 490px;
         }                 
@@ -33,7 +29,7 @@
                     font-size: 36px;
                     line-height: 49px;
                     color: $purple;          
-                    margin-bottom: 0;  
+                    margin: 0;  
                     @media (max-width: 1200px) {
                         font-size: 30px;
                     }
@@ -58,8 +54,7 @@
             }
         }
         span{
-
-            margin-right: 3%;    
+            margin: -20px 0;    
             @media (max-width: 1024px) {
                 display: none;
             }
@@ -82,7 +77,7 @@
         display: flex;
         margin: 8vh auto;
         justify-content: space-between;
-        width: 70%;
+        width: 92%;
         @media (max-width: 768px) {
             margin: 1vh auto;
             align-items: center;
@@ -104,6 +99,12 @@
             line-height: 33px;
             text-align: center;
             color: $purple;
+            @media (max-width: 1366px) {
+                width: 130px;
+                height: 130px;
+                font-size: 20px;
+                line-height: 28px;                
+            }            
             @media (max-width: 768px) {
                 cursor: pointer;
                 width: 295px;
@@ -123,7 +124,7 @@
         align-items: center;
         justify-content: space-between;
         margin: 8vh auto 4vh;
-        width: 76%;
+        width: 100%;
         span{
             display: flex;
             align-items: center;
@@ -138,6 +139,7 @@
             width: 150px;                
             height: 150px;
             border-radius: 50%;   
+            
         }
         div{
             width: 660px;
@@ -155,56 +157,8 @@
             font-size: 48px;
             line-height: 65px;
             color: $purple;
-        }
-    }
-    .players{
-        display: flex;
-        margin: 2vh auto;
-        justify-content: space-between;
-        width: 64%;
-        @media (max-width: 1024px) {
-            display: none;
-        }
-        div{
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            width: 65.8px;
-            h6{
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                background: $yellow;
-                border-radius: 50%;
-                height: 28px;
-                width: 28px;
-                margin-bottom: 0;
-                font-family: "Nunito-Black";
-                color: $purple;
-            }
-            img{
-                width: 100%
-            }            
-            span{
-                margin-top: 4px;
-                color: $purple;
-            }
-        }
-    }
-    .theme_id{
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-weight: 700;
-        font-size: 64px;
-        line-height: 87px;
-        
-        background: #FFFFFF;
-        border: 4px solid $purple;
-        width: 150px;                
-        height: 150px;
-        border-radius: 50%;   
 
+        }
     }
     .theme_id_adapt{
         display: none;

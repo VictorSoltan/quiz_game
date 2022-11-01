@@ -1,0 +1,134 @@
+@import 'variables';
+
+.sorting{
+    .select_theme_container{
+        text-align: left;
+        p{
+            margin-top: 0;
+            color: $purple;
+            @media (max-width: 768px) {
+                font-weight: 600;
+                font-size: 14px;
+                line-height: 19px;
+            } 
+        }
+    }
+    .choose_answer{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 0vh;
+        margin-left: -38px;
+        width: 100vw;    
+        .yellow_button{
+            width: 236px;
+            height: 40px;
+            font-size: 24px;
+            line-height: 33px;            
+            margin-top: 4vh;
+        }            
+        .answers{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            margin-top: 3.9vh;
+            width: 90%;
+            button{
+                font-family: 'Nunito-Light';  
+                width: 134px;
+                height: 134px;
+                background: $yellow;     
+                color: $purple; 
+                border-radius: 50%;    
+                padding: 0 9%;
+                font-family: 'Nunito';
+                font-style: normal;
+                font-weight: 600;
+                font-size: 14px;
+                line-height: 19px;
+                color: $purple;
+            }
+        }
+        h3{
+            font-family: 'Nunito-Black';
+            font-style: normal;
+            font-weight: 900;
+            font-size: 36px;
+            line-height: 49px;
+            
+            color: $purple;      
+            margin-bottom: 0;      
+        }
+        h4{
+            font-family: 'Nunito-Black';
+            font-weight: 900;
+            font-size: 24px;
+            line-height: 33px;    
+            margin-top: 2vh;        
+        }
+        p{
+            margin-top: 0;
+            font-family: 'Nunito';
+            font-style: normal;
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 19px;            
+        }        
+        .choose_film_hero{
+            margin: 3vh 0;
+            margin: 0vh 0 2vh;
+            width: 100%;
+            align-self: center;
+            div{
+                display: flex;
+                justify-content: space-between;
+                width: 100%;
+                margin-bottom: 4vh;
+                &:first-child{
+                    margin-bottom: 0vh;
+                }
+                span{
+                    margin: 2vh 0;
+                    font-family: 'Nunito';
+                    font-style: normal;
+                    font-weight: 600;
+                    font-size: 14px;
+                    line-height: 19px;        
+                    color: $purple;
+                    padding: 0 20px;       
+                    width: 38px;     
+                }
+                button{
+                    font-family: 'Nunito';
+                    background: $yellow;
+                    font-weight: 600;
+                    font-size: 14px;
+                    line-height: 19px;
+                    border-radius: 32px;  
+                    width: 37%;        
+                    padding: 15.5px 20px;          
+                    &:first-child{
+                        text-align: left;
+                        border-bottom-left-radius: 0px;
+                        border-top-left-radius: 0px;
+                    }
+                    &:last-child{
+                        text-align: right;
+                        border-bottom-right-radius: 0px;
+                        border-top-right-radius: 0px;                        
+                    }
+                }
+            }
+        }
+        .timer{
+            font-family: 'Nunito';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 48px;
+            line-height: 65px;
+            text-align: center;
+            color: $purple;
+        }        
+    }
+}

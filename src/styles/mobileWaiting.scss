@@ -1,32 +1,30 @@
 @import 'variables';
 
-.mobile_game{
-    margin-top: 110px;
+.mobile_waiting{
+    width: 100vw;
+    margin-left: -38px;
     h1{
-        font-family: 'Nunito-Black';
+        margin-top: 5vh;
+        font-family: 'Nunito-Bold';
         font-style: normal;
         font-weight: 900;
         font-size: 40px;
         line-height: 55px;
     }
-    .players{
+    .waiting_players{
         display: flex;
         justify-content: space-between;
         flex-wrap: wrap;
         width: 80%;
-        padding-bottom: 60px;
-        margin: 5vh auto 2vh;
+        height: 33vh;
+        margin: 5vh auto 3vh;
         div{
             display: flex;
             flex-direction: column;
             align-items: center;
-            width: 81.88px;
-
+            width: 25.5%;
             .player{
                 width: 100%;
-            }
-            .vector{
-                margin-top: -24px;
             }
             span{
                 font-family: 'Nunito-Bold';
@@ -38,11 +36,11 @@
             }            
         }
     }
-    button{
+    a{
         margin: 0vh auto;
         width: 179px;
         height: 51px;
-        font-family: 'Nunito-Black';
+        font-family: 'Nunito-Bold';
         font-style: normal;
         font-weight: 900;
         font-size: 24px;

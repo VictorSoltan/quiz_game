@@ -7,13 +7,14 @@
     height: 100%;
     background-repeat: no-repeat;
     background-size: cover;
+    display: flex;
+    flex-direction: column;
     @media (max-width: 480px) {
         background-size: 100vw calc(2*100vh);
         background-repeat: repeat;
     }
     .banner_container{
-        position: relative;
-        top: 68px;
+        margin-top: 68px;
         width: 100%;
         display: flex;
         justify-content: space-between;
@@ -44,12 +45,13 @@
                 line-height: 49px;
                 color: $almostBlck;
                 padding-left: 25.6%;
+                padding-left: 157,872px; 
                 @media (max-width: 1024px) {
                     font-size: 24px;
                     line-height: 33px;   
                 }
                 @media (max-width: 768px) {
-                    padding-left: 23px;
+                    padding-left: 38px;
                 }
             }
         }
@@ -73,4 +75,95 @@
             }
         }
     }
+    .content{
+        display: flex;
+        flex-direction: column;
+        margin-top: 28px;
+        padding: 0 clamp(151.04px, calc( 25.6% * 0.4 ), calc( 25.6% * 0.4 ));
+        max-width: 100%;
+        @media (max-width: 1200px) {
+            padding-left: clamp(125.44px, calc( 25.6% * 0.4 ), calc( 25.6% * 0.4 ));
+        }        
+        @media (max-width: 1024px) {
+            padding-left: clamp(51.2px, calc( 25.6% * 0.4 ), calc( 25.6% * 0.4 ));
+        }
+        @media (max-width: 768px) {
+            width: calc(100% - 46px);
+            padding: 0 38px;
+            margin-top: 13px;
+        }
+
+        // .user_info{
+        //     width: 100%;
+        //     min-width: 300px;
+        //     padding-left: 25.6%;
+        //     @media (max-width: 768px) {
+        //         min-width: 0px;
+        //         padding-left: 38px;
+        //     }
+        // }
+    }
+    .big_nameplate{
+        font-family: 'Nunito-Black';
+        font-style: normal;
+        font-weight: 900;
+        font-size: 96px;
+        line-height: 131px;
+        color: $purple;
+        margin: 0 0px;
+    }
+    .average_nameplate{
+        font-family: 'Nunito-Black';
+        font-style: normal;
+        font-weight: 900;
+        font-size: 36px;
+        line-height: 49px;
+        color: $purple;    
+    }
+    .qr_code{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        filter: drop-shadow(0px 4px 11px rgba(0, 0, 0, 0.25));
+        border-radius: 20px;
+        background: white;        
+    }
+    .theme_id{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: 700;
+        font-size: 64px;
+        line-height: 87px;
+        
+        background: #FFFFFF;
+        border: 4px solid $purple;
+        width: 142px;                
+        height: 142px;
+        border-radius: 50%;   
+    }    
+    .players{
+        display: flex;
+        margin: 2vh auto;
+        justify-content: space-between;
+        width: 80%;
+        div{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 12%;
+            img{
+                width: 100%
+            }            
+            span{
+                margin-top: 4px;
+                font-family: 'Nunito-Bold';
+                font-style: normal;
+                font-weight: 700;
+                font-size: 14px;
+                line-height: 19px;
+                text-align: center;
+            }
+        }
+    }    
 }

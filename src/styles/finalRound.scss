@@ -1,0 +1,117 @@
+@import 'variables';
+
+.final_round{
+    .final{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        text-align: left;
+        div{
+            h1{
+                margin: 0;
+                font-family: 'Nunito';
+                font-style: normal;
+                font-weight: 600;
+                font-size: 48px;
+                line-height: 65px;            
+            }
+            p{
+                margin-top: 11px;
+                font-family: 'Nunito';
+                font-style: normal;
+                font-weight: 400;
+                font-size: 24px;
+                line-height: 33px;
+            }
+        }
+        .timer{
+            font-family: 'Nunito';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 48px;
+            line-height: 65px;
+            text-align: center;
+            
+            color: #4C1357;        
+        } 
+    }
+    h3{
+        margin-top: 7vh;
+    }
+    .results{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        margin-top: calc(211px + 3vh);
+        span{
+            font-family: 'Nunito';
+        }
+        .border{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 13px;
+            height: 78px;
+            background: $purple;
+            border-radius: 12.5px;        
+            span{
+                margin-top: -50px;
+                font-family: 'Nunito';
+                font-style: normal;
+                font-weight: 500;
+                font-size: 36px;
+                line-height: 49px;
+                text-align: center;                
+            }    
+        }
+        .yellow_line{
+            position: relative;
+            display: flex;
+            align-items: flex-end;
+            width: 1223px;
+            height: 13px;
+            background: $yellow;  
+            .player_answer{
+                position: absolute;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                align-items: center;                
+                width: 13px;
+                height: 211px;
+                background: $purple;
+                border-radius: 12.5px;
+                img{
+                    width: 60px;
+                    height: 60px;                    
+                }
+                span{
+                    margin-top: 150px;
+                    font-style: normal;
+                    font-weight: 500;
+                    font-size: 24px;
+                    line-height: 33px;
+                    text-align: center;   
+                }  
+            }     
+            .answer{
+                position: absolute;
+                display: flex;
+                flex-direction: column;
+                align-items: center;                
+                width: 13px;
+                height: 78px;
+                background: #2CFF34;
+                border-radius: 12.5px;
+                span{
+                    margin-top: -30px;
+                    font-style: normal;
+                    font-weight: 500;
+                    font-size: 24px;
+                    line-height: 33px;
+                    text-align: center;                
+                }  
+            }     
+        }
+    }
+}

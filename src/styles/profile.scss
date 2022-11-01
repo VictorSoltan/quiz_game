@@ -1,26 +1,31 @@
 .component{
     display: flex;
     justify-content: space-between;
-    margin-top: 14px;
+    align-items: flex-start;
+    margin-top: -16px;
     .user_info_container{
         display: flex;
         justify-content: flex-end;
-        margin-top: 50px;
-        width: 40%;
-        min-width: 590px;
+        width: 29.8%;
+        min-width: 436px;
         @media (max-width: 1200px) {
-            min-width: 490px;
+            min-width: 364px;
         }        
         @media (max-width: 1024px) {
-            min-width: 200px;
+            width: 39.8%;
+            min-width: 230px;
+        }
+        @media (max-width: 768px) {
+            min-width: 176px;
+            width: 39.2%;
         }
         .user_info{
             width: 100%;
             min-width: 300px;
-            padding-left: 25.6%;
-            @media (max-width: 768px) {
+            // padding-left: 25.6%;
+            @media (max-width: 1024px) {
                 min-width: 0px;
-                padding-left: 23px;
+                // padding-left: 23px;
             }
             div{
                 display: flex;
@@ -40,6 +45,7 @@
                         line-height: 19px;
                     }
                     &:first-child{
+                        font-family: "Nunito-Light";
                         text-align: left;
                         font-weight: 300;
                         width: 60px;
@@ -48,7 +54,7 @@
                         }
                     }
                     &:last-child{
-                        font-family: "Nunito-Bold";
+                        font-family: "Nunito";
                         font-weight: 600;
                         margin-left: 50px;
                         @media (max-width: 1024px) {
@@ -61,8 +67,9 @@
     }
     .profile_photo{
         width: 60%;
+        margin-top: -50px;
         @media (max-width: 768px) {
-            margin-top: 14px;
+            margin-top: -40px;
         }
         img{
             display: flex;
