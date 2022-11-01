@@ -3,10 +3,10 @@
 .games_container{
     display: flex;
     flex-direction: column;
-    width: 100vw;
-    margin-left: -38px;
     @media (max-width: 768px) {
         flex-direction: column-reverse;        
+        width: 100vw;
+        margin-left: -38px;
     }
     .games{
         display: flex;
