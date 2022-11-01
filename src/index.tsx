@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom/client';
 import './index.scss';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import { HashRouter } from 'react-router-dom'
+import {BrowserRouter as Router} from "react-router-dom"
 import './fonts/Nunito-Regular.ttf';
 import './fonts/Nunito-SemiBold.ttf';
 import './fonts/Nunito-ExtraBold.ttf';
@@ -14,9 +14,9 @@ const root = ReactDOM.createRoot(
 );
 root.render(
   <React.StrictMode>
-    <HashRouter>
+    <Router basename={process.env.PUBLIC_URL}> 
   		<App />
-    </HashRouter>
+    </Router>
   </React.StrictMode>
 );
 
