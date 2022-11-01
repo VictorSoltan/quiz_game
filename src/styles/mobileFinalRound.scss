@@ -63,7 +63,7 @@
                     box-shadow: inset 0px 2px 4px rgba(0, 0, 0, 0.25);
                     border-radius: 50px;         
                     width: 204px;
-                    height: 55px;                              
+                    height: 55px;        
                 } 
                 button{
                     margin-top: 5vh;
@@ -86,7 +86,7 @@
                 justify-content: space-between;
                 align-items: center;
                 height: 285px;
-                margin: 10px -120px 0 -80px;
+                margin: 0 -120px 0 -80px;
                 .slider {
                     transform: rotate(-90deg);
                     -webkit-appearance: none;
@@ -108,16 +108,24 @@
                 div{
                     position: relative;
                     display: flex;
-                    align-items: center;
+                    align-items: flex-start;
                     z-index: 9999;
+                    &:last-child{
+                        align-items: flex-end;
+                        h6{
+                            top: -7px;
+                        }
+                    }
                     h6{
                         position: absolute;
-                        right: 44px;
+                        right: 48px;
                         font-weight: 500;
                         font-size: 14px;
                         line-height: 19px;
                         font-family: 'Nunito';   
-                        text-align: center;                        
+                        text-align: center;    
+                        margin: 0;                    
+                        top: -4px;
                     }
                     span{
                         display: block;

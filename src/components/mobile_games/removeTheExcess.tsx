@@ -1,4 +1,4 @@
-import { Route } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 
 export default function RemoveTheExcess({setState} : {setState: any}) {
     const answers = [
@@ -6,7 +6,8 @@ export default function RemoveTheExcess({setState} : {setState: any}) {
             'Я плюю на ваші могили',
             'Шоу Трумана',
             'Хоббіт'
-        ]
+        ],
+        navigate = useNavigate()
 
 
     return(
@@ -15,7 +16,7 @@ export default function RemoveTheExcess({setState} : {setState: any}) {
             <div className='answers' style={ answers.length>2 ? {width: '80%'} : {}}>
                 {answers.map((item, index) => (
                     <div style={answers.length>2&&(index===0||index===3) ? {width: '100%'} : {}} key={index}>
-                        <button onClick={() => setState('connections')} style={answers.length>2 ? {width: '102px', height: '102px'} : {}}>{item}</button>
+                        <button onClick={() => {setState('connections'); navigate('/connections')}} style={answers.length>2 ? {width: '102px', height: '102px'} : {}}>{item}</button>
                     </div>
                 ))}
             </div>        

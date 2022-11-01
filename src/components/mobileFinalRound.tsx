@@ -1,9 +1,15 @@
-import { useState } from 'react';
+import { useState, useRef } from 'react';
 
 import '../styles/mobileFinalRound.scss';
 
 export default function MobileFinalRound(){
-    const [ value, setValue ] = useState(0); 
+    const [ value, setValue ] = useState(100), 
+        inputRef = useRef<HTMLInputElement>(null)
+
+    // useEffect(() => {
+        // inputRef.slider.getDOMNode().orient = 'vertical';
+
+    // })
 
     return(
         <div className='mobile_final_round'>
@@ -23,7 +29,7 @@ export default function MobileFinalRound(){
                             <h6>200</h6>
                             <span />
                         </div>
-                        <input type="range" onChange={(e) => setValue(e.target.value as any)} min="1" max="200" value={value} className="slider" id="myRange" />
+                        <input type="range" ref={inputRef} onChange={(e) => setValue(e.target.value as any)} min="1" max="200" value={value} className="slider" id="myRange" />
                         <div>
                             <h6>1</h6>
                             <span />

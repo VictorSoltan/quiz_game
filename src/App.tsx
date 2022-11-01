@@ -71,7 +71,9 @@ function App() {
         <Route path="mobile_profile" element={<MobileProfile />} />
         <Route path="mobile_waiting" element={<MobileWaiting />} />
         <Route path="mobile_game" element={<MobileGame />} />
-        <Route path="mobile_sorting" element={<Sorting />} />
+        {["mobile_sorting", "remove_excess", "connections"].map((path, index) => (
+          <Route key={index}  path={path} element={<Sorting />} />
+        ))}
 
         
         <Route path="mobile_final_round" element={<MobileFinalRound />} />

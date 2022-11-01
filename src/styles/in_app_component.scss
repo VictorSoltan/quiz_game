@@ -35,6 +35,8 @@
             }
             @media (max-width: 1024px) {
                 min-width: 200px;
+                width: auto;
+                padding-right: 4%;
             }        
 
             h1{
@@ -50,7 +52,9 @@
                     line-height: 33px;   
                 }
                 @media (max-width: 768px) {
+                    white-space: nowrap;
                     padding-left: 38px;
+                    margin-right: 50%;
                 }
             }
         }
