@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom/client';
 import './index.scss';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import {BrowserRouter as Router} from "react-router-dom"
+import {HashRouter as Router} from "react-router-dom"
 import './fonts/Nunito-Regular.ttf';
 import './fonts/Nunito-SemiBold.ttf';
 import './fonts/Nunito-ExtraBold.ttf';
