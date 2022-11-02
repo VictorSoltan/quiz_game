@@ -10,13 +10,7 @@ export default function MobileGame(){
         'Цікаві Факти',
         'Технології та IT'
     ],
-    answers = [
-        'В амперах',
-        'В Порошенках',
-        'В вольтах',
-        'В каденціях'
-    ],
-    [value, setValue] = useState(false),
+    [value, setValue] = useState(true),
     navigate = useNavigate()
 
     return(
@@ -35,7 +29,7 @@ export default function MobileGame(){
                 {value && <h1 className='select_theme'>Обери бажану</h1>}
                 <div className='themes' style={!value ? {marginTop: '9.6vh'} : {}}>
                     {themes.map((item, index) => (
-                        <button onClick={() => value ? navigate('/mobile_sorting') : setValue(true)} key={index}>{item}</button>
+                        <button onClick={() => !value ? navigate('/mobile_sorting') : setValue(false)} key={index}>{item}</button>
                     ))}
                 </div>
                 <span className='theme_id theme_id_adapt'>5</span>    

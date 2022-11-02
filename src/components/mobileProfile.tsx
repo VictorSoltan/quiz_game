@@ -1,5 +1,6 @@
 import { useState, useRef } from "react";
 import { Link } from "react-router-dom";
+import { Avatar } from "@material-ui/core";
 
 import I1 from '../assets/phone/profile/1.png';
 import I2 from '../assets/phone/profile/2.png';
@@ -50,7 +51,7 @@ export default function MobileProfile(){
                   onChange={e => setSelectedImage(e.target.files)}
                   accept=".jpg,.png"
                 />
-                <img src={selectedImage ? URL.createObjectURL(selectedImage[0]) : image} alt="profile photo" className='profile_photo'/>
+                <Avatar src={selectedImage ? URL.createObjectURL(selectedImage[0]) : image}  className='profile_photo'/>
             </div>
             <Link to="/mobile_waiting" className='yellow_button ready'>Готово</Link>
         </div>

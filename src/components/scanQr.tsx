@@ -15,7 +15,7 @@ export default function ScanQr({setLogin} : {setLogin: any}){
     delay = 500,
     [scanner, setScanner] = useState<Boolean>(false),
     [data, setData] = useState(""),
-    [error, setError] = useState(""),
+    // [error, setError] = useState(""),
     handleScan = (
     result: Result | undefined | null,
     error: Error | undefined | null
@@ -28,12 +28,12 @@ export default function ScanQr({setLogin} : {setLogin: any}){
       setData("");
     }
     if (!!error) {
-      setError(error?.message);
+      // setError(error?.message);
     } else {
       // Reset the error since we don't
       // need it to be displayed as constant
       // error - only while it's occurring.
-      setError("");
+      // setError("");
     }
   },
   navigate = useNavigate()
@@ -41,7 +41,7 @@ export default function ScanQr({setLogin} : {setLogin: any}){
 	useEffect(() => {
     if(data){
       setLogin(true)
-      navigate(data)
+      navigate(data.replace(`${window.location.origin}/quiz_game/#`, ''))
       console.log(data)
     }
 	}, [data])

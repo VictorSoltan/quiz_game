@@ -43,12 +43,10 @@
         }
     }
     .qr_code{
-
         padding: 5px;
         margin: 0.4vh auto 0;
         height: 31.3vh;
         width: 31.3vh;
-
     }
     .room{
         font-family: 'Nunito-Bold';
@@ -61,7 +59,7 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
-        margin: 6vh 0 4vh;
+        margin: 6vh 0 1.6vh;
         .footer_elem{
             display: flex;
             align-items: center;

@@ -34,12 +34,13 @@
         }
         .choose_number{
             display: flex;
+            flex-direction: column;
             align-items: center;
             justify-content: space-around;
             width: 80%;
             padding: 0 10%;
             overflow: hidden;
-            margin-top: 4vh;
+            margin-top: 5vh;
             .info{
                 display: flex;
                 flex-direction: column;
@@ -62,79 +63,82 @@
                     border: 0.5px solid #1A1A1A;
                     box-shadow: inset 0px 2px 4px rgba(0, 0, 0, 0.25);
                     border-radius: 50px;         
-                    width: 204px;
+                    width: 90%;
                     height: 55px;        
                 } 
+                .slider_container{
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    margin: 4vh auto 4vh;
+                    width: 95%;
+                    .slider {
+                        -webkit-appearance: none;
+                        height: 6px;
+                        background: $yellow;
+                        outline: none;
+                        transition: 0.4s;
+                        padding: 0;
+                        width: 100%;
+                        &::-webkit-slider-thumb {
+                            -webkit-appearance: none;
+                            width: 11px;
+                            height: 44px;
+                            
+                            background: #9747FF;
+                            border-radius: 12.5px;
+                            transition: 0.4s;
+                            cursor: pointer;
+                        }                  
+                        &::-moz-range-thumb{
+                            width: 11px;
+                            height: 44px;
+                            border: none;
+                            background: #9747FF;
+                            border-radius: 12.5px;
+                            transition: 0.4s;
+                            cursor: pointer;
+                        }                    
+                    }
+                    div{
+                        position: relative;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        z-index: 9999;
+                        &:last-child{
+                            align-items: flex-end;
+                        }
+                        h6{
+                            position: absolute;
+                            font-weight: 500;
+                            font-size: 14px;
+                            line-height: 19px;
+                            font-family: 'Nunito';   
+                            text-align: center;    
+                            margin: 0;                    
+                            top: -20px;
+                        }
+                        span{
+                            display: block;
+                            width: 7px;
+                            height: 42px;
+                            background: $purple;
+                            border-radius: 12.5px;
+                        }
+                    }
+                }                
                 button{
-                    margin-top: 5vh;
+                    margin: 5vh 0 0.8vh;
                     width: 157px;
                     height: 44.73px; 
-
                     font-family: 'Nunito-Bold';
                     font-style: normal;
                     font-weight: 700;
                     font-size: 20px;
                     line-height: 27px;
                     text-align: center;
-                    
                     color: #4C1357;                    
-                }
-            }
-            .slider_container{
-                display: flex;
-                flex-direction: column;
-                justify-content: space-between;
-                align-items: center;
-                height: 285px;
-                margin: 0 -120px 0 -80px;
-                .slider {
-                    transform: rotate(-90deg);
-                    -webkit-appearance: none;
-                    width: 270px;
-                    height: 6px;
-                    background: $yellow;
-                    outline: none;
-                    transition: 0.4s;
-                    &::-moz-range-thumb{
-                        width: 11px;
-                        height: 44px;
-                        
-                        background: #9747FF;
-                        border-radius: 12.5px;
-                        transition: 0.4s;
-                        cursor: pointer;
-                    }                    
-                }
-                div{
-                    position: relative;
-                    display: flex;
-                    align-items: flex-start;
-                    z-index: 9999;
-                    &:last-child{
-                        align-items: flex-end;
-                        h6{
-                            top: -7px;
-                        }
-                    }
-                    h6{
-                        position: absolute;
-                        right: 48px;
-                        font-weight: 500;
-                        font-size: 14px;
-                        line-height: 19px;
-                        font-family: 'Nunito';   
-                        text-align: center;    
-                        margin: 0;                    
-                        top: -4px;
-                    }
-                    span{
-                        display: block;
-                        height: 7px;
-                        width: 42px;
-                        background: $purple;
-                        border-radius: 12.5px;
-                    }
-                    // margin: 10px 0;
                 }
             }
         }    

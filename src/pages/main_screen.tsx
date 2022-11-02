@@ -1,3 +1,4 @@
+import { useEffect } from 'react'
 import MainInfo from '../assets/mainInfo.png';
 import PhoneInfo from '../assets/phone/back.png';
 
@@ -12,6 +13,26 @@ import '../styles/main_screen.scss';
 export default function MainScreen({modalState, setModalState} : {modalState: string; setModalState: any}){
 
     const socialMedia = [Discord, Telegram, Insta]
+
+    useEffect(() => {
+        let logo_elem = document.querySelector('.logo_elem') as HTMLElement,
+            adaptive_menu = document.querySelector('.adaptive_menu') as HTMLElement,
+            score = document.querySelector('.score') as HTMLElement
+        
+        const updateWindowDimensions = () => {
+            if(window.innerWidth < 1024){
+                if(logo_elem) logo_elem.style.display = 'flex'
+                if(adaptive_menu) adaptive_menu.style.display = 'flex'
+                if(score) score.style.display = 'none'
+            }else{
+                if(adaptive_menu) adaptive_menu.style.display = 'none'
+            }            
+        }
+        updateWindowDimensions()
+        window.addEventListener("resize", updateWindowDimensions);
+        return () => window.removeEventListener("resize", updateWindowDimensions) 
+
+    }, [window.innerWidth])
 
     return(
         <section className="main_screen" style={{backgroundImage: `url(${MainInfo})`}}>

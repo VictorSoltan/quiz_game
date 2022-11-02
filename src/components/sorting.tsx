@@ -8,19 +8,14 @@ import Connections from './mobile_games/connections'
 
 export default function Sorting() {
     const 
-        [state, setState] = useState('sorting'),
-        answers = [
-            'Чужий',
-            'Я плюю на ваші могили',
-            'Шоу Трумана',
-            'Хоббіт'
-        ]
+        [state, setState] = useState('sorting')
 
 
     return(
         <div className='sorting'>
             <div className='select_theme_container'>
-                <p>(за нічиєю комп’ютер обере випадкову категорію з лідерів опитування)</p>
+                <p>У вас є одна хвилина,<br/>
+                    аби дати якомога більше правильних відповідей</p>
             </div>
             <section className='choose_answer'>
                 {state === 'sorting' ? <SortingComponent setState={setState} />

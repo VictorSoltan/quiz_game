@@ -33,7 +33,7 @@ export default function CallFriend(){
                 <QRCode 
                     viewBox={`0 0 256 256`} 
                     style={{ height: "auto", maxWidth: "90%", width: "90%" }} 
-                    value={'/mobile_profile'} 
+                    value={window.location.origin + '/quiz_game/#/mobile_profile'} 
                 />
             </div>
             <Link to="/waiting" className='yellow_button room'>Кімната очікування</Link>

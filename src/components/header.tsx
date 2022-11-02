@@ -1,4 +1,5 @@
-import { useState } from 'react'
+import { Avatar } from "@material-ui/core";
+// import { useState } from 'react'
 import { Link, useLocation } from 'react-router-dom'
 import Logo from '../assets/logo.svg';
 import Ava from '../assets/profile.svg';
@@ -27,10 +28,15 @@ export default function Header({modalState, setModalState, login, adaptMenu, set
                         <div/>
                     </div>                    
                     <img src={Logo} alt="Logo" />
+
                     {menu.map((el, index) => (
                         <Link to={el.link} className={location.pathname === el.link ? 'yellow_button active' : 'yellow_button'} key={index}>{el.name}</Link>
                     ))}
                 </div>
+                <div className="score">
+                    Score: 
+                    <span>5</span>
+                </div>                
                 <div className='header_elem profile_elem'>
                     <span>
                         {login ?
@@ -42,7 +48,7 @@ export default function Header({modalState, setModalState, login, adaptMenu, set
                             <button onClick={() => {setModalState("Login"); setAdaptMenu(false)}}>увійти</button> 
                         </>}
                     </span>
-                    <Link to='/profile'><img src={Ava} alt="Avatar" /></Link>
+                    <Link to='/profile'><Avatar src={Ava} alt="Avatar" /></Link>
                 </div>
             </header>
             <div onClick={() => setAdaptMenu(!adaptMenu)} className={adaptMenu&&!modalState ? 'adaptiveMenu' : 'adaptiveMenu adaptiveMenuHidden'}>

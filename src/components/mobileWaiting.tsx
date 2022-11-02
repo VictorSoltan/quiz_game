@@ -5,8 +5,6 @@ import I3 from '../assets/players/3.png'
 import I4 from '../assets/players/4.png'
 import Uknown from '../assets/players/uknown.png'
 
-import Vector from '../assets/players/Vector.svg'
-
 import '../styles/mobileWaiting.scss'
 
 export default function MobileWaiting(){

@@ -1,5 +1,3 @@
-import { useState, useRef, useEffect } from "react";
-
 import I1 from '../assets/phone/profile/1.png';
 import I2 from '../assets/phone/profile/2.png';
 import I3 from '../assets/phone/profile/3.png';

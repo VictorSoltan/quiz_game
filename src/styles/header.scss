@@ -22,6 +22,9 @@
         .logo_elem{
             width: 34%;
             min-width: 640px;
+            @media (max-width: 1024px) {
+                display: none;
+            }
             .adaptive_menu{
                 display: none;
                 flex-direction: column;
@@ -30,7 +33,7 @@
                 height: 29px;
                 margin-right: 14px;
                 @media (max-width: 1024px) {
-                    display: flex;
+                    // display: flex;
                 }
                 div{
                     transition: 0.4s;
@@ -40,6 +43,7 @@
                     height: 7px;
                 }
             }      
+
             .activeMenu{
                 div {
                     background: $purple;
@@ -71,6 +75,26 @@
                 height: 40px;
             }
         }
+        .score{
+            display: none;
+            @media (max-width: 1024px) {
+                display: flex;
+                align-items: center;
+                font-family: 'Nunito';
+                color: $purple;
+            }                
+            span{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-family: 'Nunito-Bold';
+                border-radius: 50%;
+                width: 40px;
+                height: 40px;
+                margin-left: 8px;
+                background: $yellow;
+            }
+        }        
         .profile_elem{
             width: 240px;
             justify-content: center;

@@ -1,4 +1,5 @@
 
+import { useEffect } from 'react'
 import { Outlet, useLocation } from 'react-router-dom'
 import Background from '../assets/background.png'
 import PhoneBackground from '../assets/phone/background.png'
@@ -34,8 +35,30 @@ export default function InAppComponent(){
             result_tour: '1-й тур',
             round_end: '1-й тур'
         },
-
         pathname = location.pathname.replace('/', '') as any
+        useEffect(() => {
+            let logo_elem = document.querySelector('.logo_elem') as HTMLElement,
+                adaptive_menu = document.querySelector('.adaptive_menu') as HTMLElement,
+                score = document.querySelector('.score') as HTMLElement
+            
+            const updateWindowDimensions = () => {
+                if(window.innerWidth < 1024){
+                    if(logo_elem) logo_elem.style.display = 'none'
+                    if(adaptive_menu) adaptive_menu.style.display = 'none'
+                    if(score) score.style.display = 'flex'
+                }else{
+                    if(score) score.style.display = 'none'
+                    if(adaptive_menu) adaptive_menu.style.display = 'none'                    
+                    if(logo_elem) logo_elem.style.display = 'flex'
+                }            
+            }
+    
+            updateWindowDimensions()
+            window.addEventListener("resize", updateWindowDimensions);
+            return () => window.removeEventListener("resize", updateWindowDimensions) 
+    
+        }, [window.innerWidth])
+
     return(
         <div className='in_app_components' style={window.innerWidth > 768 ? { backgroundImage: `URL(${Background})`} : { backgroundImage: `URL(${PhoneBackground})`}}>
             <div className='banner_container'>
