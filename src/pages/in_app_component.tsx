@@ -1,5 +1,5 @@
 
-import { useEffect } from 'react'
+import { useState, useEffect } from 'react'
 import { Outlet, useLocation } from 'react-router-dom'
 import Background from '../assets/background.png'
 import PhoneBackground from '../assets/phone/background.png'
@@ -7,6 +7,10 @@ import PhoneBackground from '../assets/phone/background.png'
 import '../styles/in_app_component.scss'
 
 export default function InAppComponent(){
+
+
+
+
 
     const location = useLocation(),
         location_dict:object = {

@@ -4,12 +4,14 @@
     display: flex;
     justify-content: space-between;
     width: 100%;
-    min-height: calc(100vh - 96px);
     max-height: calc(100vh - 96px);
     overflow: hidden;
     background-repeat: no-repeat;
     background-position: bottom right;
     background-size: clamp(640px, 72vh, 780px) auto;
+    @media (min-width: 1024px) {
+        min-height: 804px;
+    }
     @media (max-width: 768px) {
         background-size: clamp(440px, 72vh, 780px) auto;
     }

@@ -1,8 +1,9 @@
 import { Avatar } from "@material-ui/core";
-// import { useState } from 'react'
+import { useState, useEffect, useContext } from 'react'
 import { Link, useLocation } from 'react-router-dom'
 import Logo from '../assets/logo.svg';
 import Ava from '../assets/profile.svg';
+import {SocketContext} from '../context/socket';
 
 import '../styles/header.scss';
 
@@ -10,13 +11,23 @@ export default function Header({modalState, setModalState, login, adaptMenu, set
     
     const 
         menu = [
-            {name:'наші ігри', link: '/games'}, {name:'івенти', link: '/games1'}, {name:'донати', link: '/games2'}
+            {name:'наші ігри', link: '/quiz_game'}, {name:'івенти', link: '/games1'}, {name:'донати', link: '/games2'}
         ],
         adaptiveMenu = [
-            {name:'Наші ігри', link: '/games'}, {name:'Івенти', link: '/games1'}, {name:'Донати', link: '/games2'}, {name:'Сканер QR', link: '/scan_qr'}
+            {name:'Наші ігри', link: '/quiz_game'}, {name:'Івенти', link: '/games1'}, {name:'Донати', link: '/games2'}, {name:'Сканер QR', link: '/scan_qr'}
         ],
-        location = useLocation()
+        [points, setPoints] = useState(0),
+        location = useLocation(),
+        socket = useContext(SocketContext) 
 
+    useEffect(() => {
+        if(socket){
+            socket.on('set_point', function(event: any){
+                console.log('set_point ', event)
+                setPoints(event)
+            })
+        }
+    }, [socket])
 
     return(
         <div className='header'>
@@ -35,7 +46,7 @@ export default function Header({modalState, setModalState, login, adaptMenu, set
                 </div>
                 <div className="score">
                     Score: 
-                    <span>5</span>
+                    <span>{points}</span>
                 </div>                
                 <div className='header_elem profile_elem'>
                     <span>

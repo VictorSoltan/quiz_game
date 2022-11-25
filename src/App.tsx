@@ -1,5 +1,8 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { Routes, Route } from 'react-router-dom'
+import { setSignedReducer } from './redux/slices/signed';
+import { useDispatch } from 'react-redux';
+
 import Header from './components/header'
 import MainScreen from './pages/main_screen'
 
@@ -18,8 +21,6 @@ import Question from './components/question'
 
 import RoundEnd from './components/roundEnd'
 
-
-
 import ResultTour from './components/resultTour'
 
 import MobileProfile from './components/mobileProfile'
@@ -37,57 +38,89 @@ import FinalRound from './components/finalRound'
 import Results from './components/results'
 import Winner from './components/winner'
 import Gratitude from './components/gratitude'
+import { useCookies } from 'react-cookie'
+import {SocketContext, connectSocket} from './context/socket';
+import { signedSelector } from './redux/slices/signed';
+import { useSelector } from 'react-redux'
+import axios from 'axios'
 
 import './App.css';
 
 function App() {
 
-  const [modalState, setModalState] = useState<string>(""),
+  const 
+    [modalState, setModalState] = useState<string>(""),
     [login, setLogin] = useState<Boolean>(false),
-    [adaptMenu, setAdaptMenu] = useState<Boolean>(false)
+    [adaptMenu, setAdaptMenu] = useState<Boolean>(false),
+    [socket, setSocket] = useState<any>(null),
+    [cookies, setCookie] = useCookies(['signature']),
+    signed = useSelector(signedSelector.getSigned).signed,
+    dispatch = useDispatch();
+
+    useEffect(() => {
+      if(!socket) setSocket(connectSocket())
+      if(socket){
+        if (cookies.signature){
+          let cookie : any = cookies.signature
+          console.log('login ', cookie) 
+          socket.emit('login', {cookie}, function(event: any){
+            console.log('login', event)
+            if(event==='Welcome') dispatch(setSignedReducer(true))
+
+          })
+        }
+      }
+      return () => {
+        if(socket) socket.emit('disconnect') 
+      }
+    }, [socket])
+
 
   return (
-    <div className="App">
-      <Header modalState={modalState} setModalState={setModalState} login={login} adaptMenu={adaptMenu} setAdaptMenu={setAdaptMenu}/>
-      {modalState&&!adaptMenu && <Modal modalState={modalState} setModalState={setModalState} setLogin={setLogin} />}
-      <Routes>
-      {/* {!login ? */}
-        <Route path="/quiz_game" element={<MainScreen modalState={modalState} setModalState={setModalState} />} />
-      {/* :  */}
-        <Route path="/" element={<InAppComponent />} >
-        <Route path="games" element={<Games />} />
-        <Route path="profile" element={<Profile />} />
-        <Route path="amount" element={<PlayersAmount />} />
-        <Route path="qr_code" element={<CallFriend />} />
-        <Route path="scan_qr" element={<ScanQr setLogin={setLogin} />} />
-        <Route path="waiting" element={<WaitingFriends />} />
-        <Route path="game_start/:id" element={<SelectTheme />} />
-        <Route path="question" element={<Question />} />
-        <Route path="round_end" element={<RoundEnd />} />
-        
+    <SocketContext.Provider value={socket}>
+      <div className="App">
+        <Header modalState={modalState} setModalState={setModalState} login={login} adaptMenu={adaptMenu} setAdaptMenu={setAdaptMenu}/>
+        {modalState&&!adaptMenu && <Modal modalState={modalState} setModalState={setModalState} setLogin={setLogin} />}
+        <Routes>
+        {!signed ?
+          <Route path="/quiz_game" element={<MainScreen modalState={modalState} setModalState={setModalState} />} />
+        :  
+          <Route path="/" element={<InAppComponent />} >
+          <Route path="/quiz_game" element={<Games />} />
+          <Route path="profile" element={<Profile />} />
+          <Route path="amount" element={<PlayersAmount />} />
+          <Route path="qr_code/:id" element={<CallFriend />} />
+          <Route path="scan_qr" element={<ScanQr setLogin={setLogin} />} />
+          <Route path="waiting/:id" element={<WaitingFriends />} />
+          <Route path="game_start/:id" element={<SelectTheme />} />
+          <Route path="question/:id" element={<Question />} />
+          <Route path="round_end/:id" element={<RoundEnd />} />
 
-        <Route path="result_tour" element={<ResultTour />} />
 
-        <Route path="mobile_profile" element={<MobileProfile />} />
-        <Route path="mobile_waiting" element={<MobileWaiting />} />
-        <Route path="mobile_game" element={<MobileGame />} />
-        {["mobile_sorting", "remove_excess", "connections"].map((path, index) => (
-          <Route key={index}  path={path} element={<Sorting />} />
-        ))}
+          <Route path="result_tour/:id" element={<ResultTour />} />
 
-        
-        <Route path="mobile_final_round" element={<MobileFinalRound />} />
+          <Route path="mobile_profile" element={<MobileProfile />} />
+          <Route path="mobile_waiting/:id" element={<MobileWaiting />} />
+          <Route path="mobile_game/:id" element={<MobileGame />} />
+          {["mobile_sorting/:id", "remove_excess/:id", "connections/:id"].map((path, index) => (
+            <Route key={index}  path={path} element={<Sorting />} />
+          ))}
 
-        <Route path="mobile_results" element={<MobileResults />} />
+          
+          <Route path="mobile_final_round/:id" element={<MobileFinalRound />} />
 
-        <Route path="final_round" element={<FinalRound />} />
-        <Route path="results" element={<Results />} />
-        <Route path="winner" element={<Winner />} />
-        <Route path="gratitude" element={<Gratitude />} />
-        </Route>
-      {/* }  */}
-      </Routes>
-    </div>
+          <Route path="mobile_results/:id" element={<MobileResults />} />
+
+          <Route path="final_round/:id" element={<FinalRound />} />
+          <Route path="results/:id" element={<Results />} />
+          <Route path="winner" element={<Winner />} />
+          <Route path="gratitude" element={<Gratitude />} />
+          </Route>
+        } 
+        </Routes>
+      </div>
+    </SocketContext.Provider>
+  
   );
 }
 

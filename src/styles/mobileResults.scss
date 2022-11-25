@@ -4,7 +4,8 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 100%;
+    margin-left: - 38px;
+    width: 100vw;
     h1{
         align-self: flex-start;
         font-family: 'Nunito';
@@ -13,7 +14,7 @@
         font-size: 24px;
         line-height: 33px;
         color: $purple;        
-        margin: 0 0 20px 28px;
+        margin: 0 0 20px 38px;
     }
     .results{
         display: flex;
