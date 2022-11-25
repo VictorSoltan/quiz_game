@@ -11,10 +11,10 @@ export default function Header({modalState, setModalState, login, adaptMenu, set
     
     const 
         menu = [
-            {name:'наші ігри', link: '/quiz_game'}, {name:'івенти', link: '/games1'}, {name:'донати', link: '/games2'}
+            {name:'наші ігри', link: '/'}, {name:'івенти', link: '/games1'}, {name:'донати', link: '/games2'}
         ],
         adaptiveMenu = [
-            {name:'Наші ігри', link: '/quiz_game'}, {name:'Івенти', link: '/games1'}, {name:'Донати', link: '/games2'}, {name:'Сканер QR', link: '/scan_qr'}
+            {name:'Наші ігри', link: '/'}, {name:'Івенти', link: '/games1'}, {name:'Донати', link: '/games2'}, {name:'Сканер QR', link: '/scan_qr'}
         ],
         [points, setPoints] = useState(0),
         location = useLocation(),
