@@ -42,7 +42,6 @@ import { useCookies } from 'react-cookie'
 import {SocketContext, connectSocket} from './context/socket';
 import { signedSelector } from './redux/slices/signed';
 import { useSelector } from 'react-redux'
-import axios from 'axios'
 
 import './App.css';
 
@@ -53,7 +52,7 @@ function App() {
     [login, setLogin] = useState<Boolean>(false),
     [adaptMenu, setAdaptMenu] = useState<Boolean>(false),
     [socket, setSocket] = useState<any>(null),
-    [cookies, setCookie] = useCookies(['signature']),
+    [cookies] = useCookies(['signature']),
     signed = useSelector(signedSelector.getSigned).signed,
     dispatch = useDispatch();
 

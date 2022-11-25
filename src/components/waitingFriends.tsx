@@ -1,9 +1,5 @@
 import { useState, useEffect, useContext } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
-import I1 from '../assets/players/1.png'
-import I2 from '../assets/players/2.png'
-import I3 from '../assets/players/3.png'
-import I4 from '../assets/players/4.png'
 import Uknown from '../assets/players/uknown.png'
 
 import Vector from '../assets/players/Vector.svg'
