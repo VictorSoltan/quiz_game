@@ -83,10 +83,10 @@ function App() {
         {modalState&&!adaptMenu && <Modal modalState={modalState} setModalState={setModalState} setLogin={setLogin} />}
         <Routes>
         {!signed ?
-          <Route path="/quiz_game" element={<MainScreen modalState={modalState} setModalState={setModalState} />} />
+          <Route path="/" element={<MainScreen modalState={modalState} setModalState={setModalState} />} />
         :  
           <Route path="/" element={<InAppComponent />} >
-          <Route path="/quiz_game" element={<Games />} />
+          <Route path="/" element={<Games />} />
           <Route path="profile" element={<Profile />} />
           <Route path="amount" element={<PlayersAmount />} />
           <Route path="qr_code/:id" element={<CallFriend />} />
