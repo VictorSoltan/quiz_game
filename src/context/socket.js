@@ -4,7 +4,7 @@ import { io } from 'socket.io-client'
 let newSocket 
 
 export function connectSocket(){  
-    newSocket = io(`http://localhost:8080/`) 
+    newSocket = io(`https://quiz-game-back.onrender.com/`) 
     console.log(newSocket)
     return newSocket
 }
