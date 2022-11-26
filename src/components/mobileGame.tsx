@@ -52,8 +52,8 @@ export default function MobileGame(){
                 })  
                 socket.on('end_of_round', function(event: any){
                     console.log('end_of_round ', event)
-                    if(event.tour === 1) navigate('/mobile_results/' + link, { state: {link: 'mobile_final_round'}})
-                    // if(event.tour === 1) navigate('/mobile_results/' + link, { state: {link: 'mobile_sorting'}})
+                    // if(event.tour === 1) navigate('/mobile_results/' + link, { state: {link: 'mobile_final_round'}})
+                    if(event.tour === 1) navigate('/mobile_results/' + link, { state: {link: 'mobile_sorting'}})
                     else if(event.tour === 2)  navigate('/mobile_results/' +link, { state: {link: 'remove_excess'}})
                     else if(event.tour === 3)  navigate('/mobile_results/' +link, { state: {link: 'connections'}})
                 })
