@@ -61,7 +61,7 @@ export default function WaitingFriends(){
                         <QRCode 
                             viewBox={`0 0 256 256`} 
                             style={{ height: "auto", maxWidth: "90%", width: "90%" }} 
-                            value={window.location.origin + '/quiz_game/#/mobile_profile'} 
+                            value={window.location.origin + '/mobile_waiting/' + window.location.pathname.replace('/waiting/', '')} 
                         />
                     </div> 
                     <Link to={"/qr_code/" + window.location.pathname.replace('/waiting/', '')} className='yellow_button'>Кімната підключення</Link>

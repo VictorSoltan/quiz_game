@@ -1,4 +1,4 @@
-import { useContext } from 'react'
+import { useContext, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { Formik } from 'formik';
 import Google from '../assets/google.svg'
@@ -68,7 +68,7 @@ export default function Modal({modalState, setModalState, setLogin} : {modalStat
                       value={values.password}
                     />                
                     <div>
-                        <button>{modalState === 'Reg' ? 'в мене вже є аккаунт' : 'зареєструватися'}</button>
+                        <button onClick={() => modalState === 'Reg' ? setModalState('Login') : setModalState('Reg')}>{modalState === 'Reg' ? 'в мене вже є аккаунт' : 'зареєструватися'}</button>
                         <button type="submit">{modalState === 'Reg' ?  'зареєструватися' : 'увійти'}</button>
                         {/* <button type="submit" onClick={() => {setLogin(true);  setModalState(""); navigate('/games')}}>{modalState === 'Reg' ?  'зареєструватися' : 'увійти'}</button> */}
                     </div>

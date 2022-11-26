@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import { Routes, Route } from 'react-router-dom'
+import { Routes, Route, useLocation } from 'react-router-dom'
 import { setSignedReducer } from './redux/slices/signed';
 import { useDispatch } from 'react-redux';
 
@@ -53,6 +53,7 @@ function App() {
     [adaptMenu, setAdaptMenu] = useState<Boolean>(false),
     [socket, setSocket] = useState<any>(null),
     [cookies] = useCookies(['signature']),
+    location = useLocation(),
     signed = useSelector(signedSelector.getSigned).signed,
     dispatch = useDispatch();
 
@@ -74,6 +75,11 @@ function App() {
       }
     }, [socket])
 
+    useEffect(() => {
+      if(!signed){
+        if(location.pathname.includes("mobile_waiting")) setModalState("Reg")
+      }else setModalState("")
+    }, [signed])
 
   return (
     <SocketContext.Provider value={socket}>
@@ -82,7 +88,10 @@ function App() {
         {modalState&&!adaptMenu && <Modal modalState={modalState} setModalState={setModalState} setLogin={setLogin} />}
         <Routes>
         {!signed ?
-          <Route path="/" element={<MainScreen modalState={modalState} setModalState={setModalState} />} />
+            <>
+              <Route path="/" element={<MainScreen modalState={modalState} setModalState={setModalState} />} />
+              <Route path="mobile_waiting/:id" element={<MainScreen modalState={modalState} setModalState={() => setModalState('Reg')} />} />
+            </>
         :  
           <Route path="/" element={<InAppComponent />} >
           <Route path="/" element={<Games />} />
